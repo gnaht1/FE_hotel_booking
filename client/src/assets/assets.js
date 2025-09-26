@@ -2,7 +2,7 @@
 import Logo from './favicon.svg';
 
 // Export them for easy import elsewhere
-export {
+export default {
     Logo,
 
 };
