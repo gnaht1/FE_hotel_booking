@@ -6,16 +6,18 @@ import CloseIcon from './closeIcon.svg';
 import CalendarIcon from './calendarIcon.svg';
 import starIconFilled from './starIconFilled.svg';
 import locationIcon from './locationIcon.svg';
+import arrowIcon from './arrowIcon.svg';
 
 // Export them for easy import elsewhere
 export default {
-    Logo,
-    SearchIcon,
-    MenuIcon,
-    CloseIcon,
-    CalendarIcon,
-    starIconFilled,
-    locationIcon,
+  Logo,
+  SearchIcon,
+  MenuIcon,
+  CloseIcon,
+  CalendarIcon,
+  starIconFilled,
+  locationIcon,
+  arrowIcon,
 };
 // City lists data for destination dropdown
 export const cities = [
