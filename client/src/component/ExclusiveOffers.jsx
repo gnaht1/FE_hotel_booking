@@ -4,8 +4,7 @@ import assets, { exclusiveOffers } from '../assets/assets'
 
 const ExclusiveOffers = () => {
     return (
-        <div className='flex flex-col items-center px-6 md:px-16 1g:px-24 xl:px-32
-pt-20 pb-30'>
+        <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 xl:px-32 pt-20 pb-30'>
             <div className='flex flex-col md:flex-row items-center justify-between w-full'>
                 <Title align="left" title="Exclusive Offers" subTitle="Take advantage of our limited-time 
                 offers and special packages to enhance your stay and create unforgettable memories." />
@@ -15,18 +14,19 @@ pt-20 pb-30'>
                         className='w-4 h-4 group-hover:translate-x-1 transition-all' />
                 </button>
             </div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-8'>
                 {exclusiveOffers.map((item) => (
                     <div
                         key={item._id}
-                        className='group relative flex flex-col items-start justify-between gap-4 pt-12 md:pt-16 pb-6 px-6 rounded-xl text-white bg-no-repeat bg-cover bg-center min-h-[300px] hover:scale-105 transition-transform duration-300 cursor-pointer'
+                        className='group relative flex flex-col items-start justify-between gap-4 pt-12 md:pt-16 pb-6 px-6 rounded-xl text-white min-h-[300px] hover:scale-105 transition-transform duration-300 cursor-default overflow-hidden'
                         style={{
-                            backgroundImage: `url(${item.image})`
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${item.image})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
                         }}
                     >
-                        {/* Overlay for better text readability */}
-                        <div className='absolute inset-0 bg-black bg-opacity-30 rounded-xl'></div>
-
                         {/* Discount Badge */}
                         <p className='px-3 py-1 absolute top-4 left-4 text-xs bg-white text-gray-800 font-medium rounded-full z-10'>
                             {item.priceOff}% OFF
@@ -38,6 +38,12 @@ pt-20 pb-30'>
                             <p className='text-sm text-gray-200 mb-3 line-clamp-2'>{item.description}</p>
                             <p className='text-xs text-gray-300'>Expires {item.expiryDate}</p>
                         </div>
+
+                        <button className='absolute bottom-4 right-4 bg-white text-gray-800 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-md hover:cursor-pointer z-10'>
+                            View Offer
+                            <img src={assets.arrowIcon} alt="arrow-icon"
+                                className='w-3 h-3 group-hover:translate-x-1 transition-transform duration-300' />
+                        </button>
                     </div>
                 ))}
             </div>
