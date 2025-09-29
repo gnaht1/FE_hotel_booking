@@ -72,3 +72,31 @@ export const cities = [
   "Tampa",
   "Honolulu"
 ];
+
+// Exclusive offers dummy data
+export const exclusiveOffers = [
+  {
+    _id: "1",
+    title: "Weekend Getaway",
+    description: "Perfect for a romantic escape with your loved one",
+    priceOff: 25,
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    expiryDate: "Dec 31, 2024"
+  },
+  {
+    _id: "2",
+    title: "Family Vacation",
+    description: "Create lasting memories with the whole family",
+    priceOff: 30,
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    expiryDate: "Jan 15, 2025"
+  },
+  {
+    _id: "3",
+    title: "Business Travel",
+    description: "Professional accommodations for your business needs",
+    priceOff: 20,
+    image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    expiryDate: "Mar 30, 2025"
+  }
+];

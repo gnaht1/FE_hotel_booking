@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import assets from '../assets/assets'
+import assets, { exclusiveOffers } from '../assets/assets'
 
 const ExclusiveOffers = () => {
     return (
@@ -15,8 +15,31 @@ pt-20 pb-30'>
                         className='w-4 h-4 group-hover:translate-x-1 transition-all' />
                 </button>
             </div>
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-8'>
+                {exclusiveOffers.map((item) => (
+                    <div
+                        key={item._id}
+                        className='group relative flex flex-col items-start justify-between gap-4 pt-12 md:pt-16 pb-6 px-6 rounded-xl text-white bg-no-repeat bg-cover bg-center min-h-[300px] hover:scale-105 transition-transform duration-300 cursor-pointer'
+                        style={{
+                            backgroundImage: `url(${item.image})`
+                        }}
+                    >
+                        {/* Overlay for better text readability */}
+                        <div className='absolute inset-0 bg-black bg-opacity-30 rounded-xl'></div>
 
+                        {/* Discount Badge */}
+                        <p className='px-3 py-1 absolute top-4 left-4 text-xs bg-white text-gray-800 font-medium rounded-full z-10'>
+                            {item.priceOff}% OFF
+                        </p>
+
+                        {/* Content */}
+                        <div className='relative z-10 mt-auto'>
+                            <h3 className='text-xl font-semibold mb-2'>{item.title}</h3>
+                            <p className='text-sm text-gray-200 mb-3 line-clamp-2'>{item.description}</p>
+                            <p className='text-xs text-gray-300'>Expires {item.expiryDate}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
