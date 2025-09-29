@@ -4,6 +4,7 @@ import HotelCard from './HotelCard'
 import Title from './Title'
 import { useNavigate } from 'react-router-dom'
 
+
 const FeaturedDestination = () => {
     const navigate = useNavigate()
     return (
