@@ -118,8 +118,23 @@ export const testimonials = [
 export const roomsDummyData = [
   {
     _id: "1",
-    hotel: { name: "Grand Palace Hotel", address: "123 Main St, New York, USA", city: "New York" },
-    images: ["https://lh3.googleusercontent.com/proxy/WR_6J0_1BhUfSZCk..."],
+    hotel: {
+      name: "Grand Palace Hotel",
+      address: "1235 Broadway, Times Square, New York, NY 10036, USA",
+      city: "New York",
+      zipCode: "10036",
+      state: "NY",
+      country: "USA",
+      phone: "+1 (212) 555-0123",
+      email: "info@grandpalacehotel.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.5,
     pricePerNight: 120,
     roomType: "Deluxe Suite",
@@ -127,8 +142,23 @@ export const roomsDummyData = [
   },
   {
     _id: "2",
-    hotel: { name: "Ocean View Resort", address: "456 Ocean Dr, Miami, USA", city: "Miami" },
-    images: ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/623148951.jpg?..."],
+    hotel: {
+      name: "Ocean View Resort",
+      address: "456 Ocean Drive, South Beach, Miami, FL 33139, USA",
+      city: "Miami",
+      zipCode: "33139",
+      state: "FL",
+      country: "USA",
+      phone: "+1 (305) 555-0456",
+      email: "reservations@oceanviewresort.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.7,
     pricePerNight: 200,
     roomType: "Ocean View Villa",
@@ -136,8 +166,23 @@ export const roomsDummyData = [
   },
   {
     _id: "3130299932",
-    hotel: { name: "Mountain Retreat", address: "789 Hill Rd, Denver, USA", city: "Denver" },
-    images: ["https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg"],
+    hotel: {
+      name: "Mountain Retreat",
+      address: "789 Rocky Mountain Blvd, Aspen, Denver, CO 80202, USA",
+      city: "Denver",
+      zipCode: "80202",
+      state: "CO",
+      country: "USA",
+      phone: "+1 (303) 555-0789",
+      email: "stay@mountainretreat.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.2,
     pricePerNight: 90,
     roomType: "Mountain View Cabin",
@@ -145,8 +190,23 @@ export const roomsDummyData = [
   },
   {
     _id: "4",
-    hotel: { name: "City Lights Inn", address: "101 Sunset Blvd, Los Angeles, USA", city: "Los Angeles" },
-    images: ["https://bizweb.dktcdn.net/100/349/716/files/7-diem-chi-ra..."],
+    hotel: {
+      name: "City Lights Inn",
+      address: "101 Sunset Boulevard, Hollywood, Los Angeles, CA 90028, USA",
+      city: "Los Angeles",
+      zipCode: "90028",
+      state: "CA",
+      country: "USA",
+      phone: "+1 (323) 555-0321",
+      email: "hello@citylightsinn.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.8,
     pricePerNight: 150,
     roomType: "Executive Room",
@@ -154,8 +214,23 @@ export const roomsDummyData = [
   },
   {
     _id: "5",
-    hotel: { name: "Sunset Boulevard Hotel", address: "202 Golden Gate Ave, San Francisco, USA", city: "San Francisco" },
-    images: ["https://asiky.com/files/images/Article/tin-tuc/chup-anh-khach-san.jpg"],
+    hotel: {
+      name: "Sunset Boulevard Hotel",
+      address: "202 Golden Gate Avenue, Union Square, San Francisco, CA 94102, USA",
+      city: "San Francisco",
+      zipCode: "94102",
+      state: "CA",
+      country: "USA",
+      phone: "+1 (415) 555-0654",
+      email: "contact@sunsetboulevardhotel.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.3,
     pricePerNight: 180,
     roomType: "Premium Suite",
