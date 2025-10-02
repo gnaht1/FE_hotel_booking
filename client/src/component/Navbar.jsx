@@ -55,19 +55,19 @@ const Navbar = () => {
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-4 lg:gap-8">
                 {navLinks.map((link, i) => (
-                    <a key={i} href={link.path} className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"}`}>
+                    <a key={i} href={link.path} className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : location.pathname === '/' ? "text-white" : "text-black"}`}>
                         {link.name}
-                        <div className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
+                        <div className={`${isScrolled ? "bg-gray-700" : location.pathname === '/' ? "bg-white" : "bg-black"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                     </a>
                 ))}
-                <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`} onClick={() => navigate('/owner')}>
+                <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : location.pathname === '/' ? 'text-white' : 'text-black'} transition-all`} onClick={() => navigate('/owner')}>
                     Dashboard
                 </button>
             </div>
 
             {/* Desktop Right */}
             <div className="hidden md:flex items-center gap-4">
-                <img src={assets.SearchIcon} alt="SearchIcon" className={`h-6 w-6 text-white transition-all duration-500 ${isScrolled ? "invert" : ""}`} />
+                <img src={assets.SearchIcon} alt="SearchIcon" className={`h-6 w-6 ${isScrolled ? "text-black invert" : location.pathname === '/' ? "text-white" : "text-black"} transition-all duration-500`} />
                 {user ?
                     (<UserButton>
                         <UserButton.MenuItems>
@@ -76,7 +76,7 @@ const Navbar = () => {
                         </UserButton.MenuItems>
                     </UserButton>)
                     :
-                    (<button onClick={openSignIn} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
+                    (<button onClick={openSignIn} className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : location.pathname === '/' ? "bg-white text-black" : "bg-white text-black"}`}>
                         Login
                     </button>)
                 }
