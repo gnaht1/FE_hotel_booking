@@ -126,7 +126,11 @@ export const roomsDummyData = [
       state: "NY",
       country: "USA",
       phone: "+1 (212) 555-0123",
-      email: "info@grandpalacehotel.com"
+      email: "info@grandpalacehotel.com",
+      owner: {
+        name: "Grand Palace Hotel",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
     },
     images: [
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
@@ -150,7 +154,11 @@ export const roomsDummyData = [
       state: "FL",
       country: "USA",
       phone: "+1 (305) 555-0456",
-      email: "reservations@oceanviewresort.com"
+      email: "reservations@oceanviewresort.com",
+      owner: {
+        name: "Ocean View Resort",
+        image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
+      }
     },
     images: [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
@@ -174,7 +182,11 @@ export const roomsDummyData = [
       state: "CO",
       country: "USA",
       phone: "+1 (303) 555-0789",
-      email: "stay@mountainretreat.com"
+      email: "stay@mountainretreat.com",
+      owner: {
+        name: "Mountain Retreat",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
     },
     images: [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
@@ -198,7 +210,11 @@ export const roomsDummyData = [
       state: "CA",
       country: "USA",
       phone: "+1 (323) 555-0321",
-      email: "hello@citylightsinn.com"
+      email: "hello@citylightsinn.com",
+      owner: {
+        name: "City Lights Inn",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
     },
     images: [
       "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
@@ -222,7 +238,11 @@ export const roomsDummyData = [
       state: "CA",
       country: "USA",
       phone: "+1 (415) 555-0654",
-      email: "contact@sunsetboulevardhotel.com"
+      email: "contact@sunsetboulevardhotel.com",
+      owner: {
+        name: "Sunset Boulevard Hotel",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
     },
     images: [
       "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
@@ -236,4 +256,30 @@ export const roomsDummyData = [
     roomType: "Premium Suite",
     amenities: ["Free WiFi", "Pool", "Breakfast", "Airport Shuttle"]
   }
+];
+
+
+// Room common specifications data
+export const roomCommonData = [
+  {
+    icon: "https://img.icons8.com/?size=100&id=2797&format=png&color=000000",
+    title: "Clean & Safe Stay",
+    description: "A well-maintained and hygienic space just for you."
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=36872&format=png&color=000000",
+    title: "Enhanced Cleaning",
+    description: "This host follows Staybnb's strict cleaning standards."
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=9Deeqjb8MjFH&format=png&color=000000",
+    title: "Excellent Location",
+    description: "90% of guests rated the location 5 stars."
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=cKMLz92tmasS&format=png&color=000000",
+    title: "Smooth Check-In",
+    description: "100% of guests gave check-in a 5-star rating."
+  },
+
 ];
