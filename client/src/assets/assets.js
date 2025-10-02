@@ -122,6 +122,7 @@ export const roomsDummyData = [
     images: ["https://lh3.googleusercontent.com/proxy/WR_6J0_1BhUfSZCk..."],
     rating: 4.5,
     pricePerNight: 120,
+    roomType: "Deluxe Suite",
     amenities: ["Free WiFi", "Pool", "Breakfast", "Parking"]
   },
   {
@@ -130,14 +131,16 @@ export const roomsDummyData = [
     images: ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/623148951.jpg?..."],
     rating: 4.7,
     pricePerNight: 200,
+    roomType: "Ocean View Villa",
     amenities: ["Free WiFi", "Sea View", "Spa", "Breakfast"]
   },
   {
-    _id: "3",
+    _id: "3130299932",
     hotel: { name: "Mountain Retreat", address: "789 Hill Rd, Denver, USA", city: "Denver" },
     images: ["https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg"],
     rating: 4.2,
     pricePerNight: 90,
+    roomType: "Mountain View Cabin",
     amenities: ["Free WiFi", "Hiking Trails", "Parking", "Pet Friendly"]
   },
   {
@@ -146,6 +149,7 @@ export const roomsDummyData = [
     images: ["https://bizweb.dktcdn.net/100/349/716/files/7-diem-chi-ra..."],
     rating: 4.8,
     pricePerNight: 150,
+    roomType: "Executive Room",
     amenities: ["Free WiFi", "Gym", "Rooftop Bar", "Breakfast"]
   },
   {
@@ -154,6 +158,7 @@ export const roomsDummyData = [
     images: ["https://asiky.com/files/images/Article/tin-tuc/chup-anh-khach-san.jpg"],
     rating: 4.3,
     pricePerNight: 180,
+    roomType: "Premium Suite",
     amenities: ["Free WiFi", "Pool", "Breakfast", "Airport Shuttle"]
   }
 ];
