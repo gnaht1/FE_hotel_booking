@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { roomsDummyData } from '../assets/assets'
+import { roomsDummyData, facilityIcons } from '../assets/assets'
 import { useState, useEffect } from 'react'
 import StarRating from '../component/StarRating'
 import assets from '../assets/assets'
@@ -63,6 +63,29 @@ const RoomDetails = () => {
                             className={`w-full rounded-xl shadow-lg object-cover cursor-pointer ${mainImage === image ? 'outline-3 outline-orange-500' : ''}`}
                         />
                     ))}
+                </div>
+            </div>
+
+            {/* Room Highlights & Price */}
+            <div className='flex flex-col md:flex-row md:justify-between mt-10 items-start md:items-center'>
+                <div className='flex flex-col'>
+                    <h1 className='text-3xl md:text-4xl font-playfair'>
+                        Experience Luxury Like Never Before
+                    </h1>
+                    <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
+                        {room.amenities.map((item, index) => (
+                            <div key={index} className='flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100'>
+                                <img src={facilityIcons[item]} alt={item} className='w-5 h-5' />
+                                <p className='text-xs'>{item}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                {/* Room Price */}
+                <div className="mt-4 md:mt-0 md:ml-8 flex-shrink-0">
+                    <p className='text-2xl font-medium'>
+                        ${room.pricePerNight} <span className="text-base font-normal text-gray-500">/ night</span>
+                    </p>
                 </div>
             </div>
         </div>
