@@ -8,6 +8,7 @@ import starIconFilled from './starIconFilled.svg';
 import locationIcon from './locationIcon.svg';
 import arrowIcon from './arrowIcon.svg';
 import starIconOutlined from './starIconOutlined.svg';
+import guestsIcon from './guest.svg';
 
 // Import PNG icons
 import wifiIcon from './wifi.png';
@@ -118,42 +119,213 @@ export const testimonials = [
 export const roomsDummyData = [
   {
     _id: "1",
-    hotel: { name: "Grand Palace Hotel", address: "123 Main St, New York, USA", city: "New York" },
-    images: ["https://lh3.googleusercontent.com/proxy/WR_6J0_1BhUfSZCk..."],
+    hotel: {
+      name: "Grand Palace Hotel",
+      address: "1235 Broadway, Times Square, New York, NY 10036, USA",
+      city: "New York",
+      zipCode: "10036",
+      state: "NY",
+      country: "USA",
+      phone: "+1 (212) 555-0123",
+      email: "info@grandpalacehotel.com",
+      owner: {
+        name: "Grand Palace Hotel",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
+    },
+    images: [
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.5,
     pricePerNight: 120,
+    roomType: "Deluxe Suite",
     amenities: ["Free WiFi", "Pool", "Breakfast", "Parking"]
   },
   {
     _id: "2",
-    hotel: { name: "Ocean View Resort", address: "456 Ocean Dr, Miami, USA", city: "Miami" },
-    images: ["https://cf.bstatic.com/xdata/images/hotel/max1024x768/623148951.jpg?..."],
+    hotel: {
+      name: "Ocean View Resort",
+      address: "456 Ocean Drive, South Beach, Miami, FL 33139, USA",
+      city: "Miami",
+      zipCode: "33139",
+      state: "FL",
+      country: "USA",
+      phone: "+1 (305) 555-0456",
+      email: "reservations@oceanviewresort.com",
+      owner: {
+        name: "Ocean View Resort",
+        image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
+      }
+    },
+    images: [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.7,
     pricePerNight: 200,
+    roomType: "Ocean View Villa",
     amenities: ["Free WiFi", "Sea View", "Spa", "Breakfast"]
   },
   {
-    _id: "3",
-    hotel: { name: "Mountain Retreat", address: "789 Hill Rd, Denver, USA", city: "Denver" },
-    images: ["https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg"],
+    _id: "3130299932",
+    hotel: {
+      name: "Mountain Retreat",
+      address: "789 Rocky Mountain Blvd, Aspen, Denver, CO 80202, USA",
+      city: "Denver",
+      zipCode: "80202",
+      state: "CO",
+      country: "USA",
+      phone: "+1 (303) 555-0789",
+      email: "stay@mountainretreat.com",
+      owner: {
+        name: "Mountain Retreat",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
+    },
+    images: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.2,
     pricePerNight: 90,
+    roomType: "Mountain View Cabin",
     amenities: ["Free WiFi", "Hiking Trails", "Parking", "Pet Friendly"]
   },
   {
     _id: "4",
-    hotel: { name: "City Lights Inn", address: "101 Sunset Blvd, Los Angeles, USA", city: "Los Angeles" },
-    images: ["https://bizweb.dktcdn.net/100/349/716/files/7-diem-chi-ra..."],
+    hotel: {
+      name: "City Lights Inn",
+      address: "101 Sunset Boulevard, Hollywood, Los Angeles, CA 90028, USA",
+      city: "Los Angeles",
+      zipCode: "90028",
+      state: "CA",
+      country: "USA",
+      phone: "+1 (323) 555-0321",
+      email: "hello@citylightsinn.com",
+      owner: {
+        name: "City Lights Inn",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
+    },
+    images: [
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.8,
     pricePerNight: 150,
+    roomType: "Executive Room",
     amenities: ["Free WiFi", "Gym", "Rooftop Bar", "Breakfast"]
   },
   {
     _id: "5",
-    hotel: { name: "Sunset Boulevard Hotel", address: "202 Golden Gate Ave, San Francisco, USA", city: "San Francisco" },
-    images: ["https://asiky.com/files/images/Article/tin-tuc/chup-anh-khach-san.jpg"],
+    hotel: {
+      name: "Sunset Boulevard Hotel",
+      address: "202 Golden Gate Avenue, Union Square, San Francisco, CA 94102, USA",
+      city: "San Francisco",
+      zipCode: "94102",
+      state: "CA",
+      country: "USA",
+      phone: "+1 (415) 555-0654",
+      email: "contact@sunsetboulevardhotel.com",
+      owner: {
+        name: "Sunset Boulevard Hotel",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200"
+      }
+    },
+    images: [
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop",
+
+    ],
     rating: 4.3,
     pricePerNight: 180,
+    roomType: "Premium Suite",
     amenities: ["Free WiFi", "Pool", "Breakfast", "Airport Shuttle"]
   }
 ];
+
+
+// Room common specifications data
+export const roomCommonData = [
+  {
+    icon: "https://img.icons8.com/?size=100&id=2797&format=png&color=000000",
+    title: "Clean & Safe Stay",
+    description: "A well-maintained and hygienic space just for you."
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=36872&format=png&color=000000",
+    title: "Enhanced Cleaning",
+    description: "This host follows Staybnb's strict cleaning standards."
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=9Deeqjb8MjFH&format=png&color=000000",
+    title: "Excellent Location",
+    description: "90% of guests rated the location 5 stars."
+  },
+  {
+    icon: "https://img.icons8.com/?size=100&id=cKMLz92tmasS&format=png&color=000000",
+    title: "Smooth Check-In",
+    description: "100% of guests gave check-in a 5-star rating."
+  },
+];
+export const userBookingsDummyData = [
+  {
+     _id: "b1",
+    hotel: {
+      name: "Sunrise Hotel",
+      address: "123 Beach Road, Miami",
+    },
+    room: {
+      roomType: "Deluxe Suite",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+      ],
+    },
+    guests: 2,
+    totalPrice: 350,
+    checkInDate: "2025-10-10",
+    checkOutDate: "2025-10-15",
+    isPaid: true,
+  },
+  {
+    _id: "b2",
+    hotel: {
+      name: "Mountain View Resort",
+      address: "456 Alpine St, Denver",
+    },
+    room: {
+      roomType: "Standard Room",
+      images: [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop"
+      ],
+    },
+    guests: 4,
+    totalPrice: 220,
+    checkInDate: "2025-11-01",
+    checkOutDate: "2025-11-05",
+    isPaid: false,
+  },
+];
+
+// Export assets (icons, images,…)
+const assets = {
+  locationIcon,
+  guestsIcon,
+  starIconFilled,
+  starIconOutlined,
+};
