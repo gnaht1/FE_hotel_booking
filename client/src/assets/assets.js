@@ -8,6 +8,7 @@ import starIconFilled from './starIconFilled.svg';
 import locationIcon from './locationIcon.svg';
 import arrowIcon from './arrowIcon.svg';
 import starIconOutlined from './starIconOutlined.svg';
+import guestsIcon from "./guests.svg";
 
 // Import PNG icons
 import wifiIcon from './wifi.png';
@@ -281,5 +282,50 @@ export const roomCommonData = [
     title: "Smooth Check-In",
     description: "100% of guests gave check-in a 5-star rating."
   },
-
 ];
+export const userBookingsDummyData = [
+  {
+     _id: "b1",
+    hotel: {
+      name: "Sunrise Hotel",
+      address: "123 Beach Road, Miami",
+    },
+    room: {
+      roomType: "Deluxe Suite",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+      ],
+    },
+    guests: 2,
+    totalPrice: 350,
+    checkInDate: "2025-10-10",
+    checkOutDate: "2025-10-15",
+    isPaid: true,
+  },
+  {
+    _id: "b2",
+    hotel: {
+      name: "Mountain View Resort",
+      address: "456 Alpine St, Denver",
+    },
+    room: {
+      roomType: "Standard Room",
+      images: [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop"
+      ],
+    },
+    guests: 4,
+    totalPrice: 220,
+    checkInDate: "2025-11-01",
+    checkOutDate: "2025-11-05",
+    isPaid: false,
+  },
+];
+
+// Export assets (icons, images,…)
+const assets = {
+  locationIcon,
+  guestsIcon,
+  starIconFilled,
+  starIconOutlined,
+};
