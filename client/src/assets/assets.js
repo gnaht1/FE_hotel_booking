@@ -8,7 +8,7 @@ import starIconFilled from './starIconFilled.svg';
 import locationIcon from './locationIcon.svg';
 import arrowIcon from './arrowIcon.svg';
 import starIconOutlined from './starIconOutlined.svg';
-import guestsIcon from "./guests.svg";
+import guestsIcon from './guests.svg';
 
 // Import PNG icons
 import wifiIcon from './wifi.png';
@@ -27,6 +27,10 @@ export default {
   locationIcon,
   arrowIcon,
   starIconOutlined,
+
+  guestsIcon,
+
+
 };
 
 // ================= Facility Icons ==================
@@ -285,7 +289,7 @@ export const roomCommonData = [
 ];
 export const userBookingsDummyData = [
   {
-     _id: "b1",
+    _id: "b1",
     hotel: {
       name: "Sunrise Hotel",
       address: "123 Beach Road, Miami",
@@ -322,10 +326,3 @@ export const userBookingsDummyData = [
   },
 ];
 
-// Export assets (icons, images,…)
-const assets = {
-  locationIcon,
-  guestsIcon,
-  starIconFilled,
-  starIconOutlined,
-};
