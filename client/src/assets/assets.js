@@ -9,6 +9,7 @@ import locationIcon from './locationIcon.svg';
 import arrowIcon from './arrowIcon.svg';
 import starIconOutlined from './starIconOutlined.svg';
 import guestsIcon from './guests.svg';
+import regImage from './regImage.jpg';
 
 // Import PNG icons
 import wifiIcon from './wifi.png';
@@ -27,9 +28,8 @@ export default {
   locationIcon,
   arrowIcon,
   starIconOutlined,
-
   guestsIcon,
-
+  regImage,
 
 };
 

@@ -29,7 +29,7 @@ const MyBookings = () => {
                 className='w-full md:w-44 h-32 md:h-28 rounded shadow object-cover' />
               <div className='flex flex-col gap-1.5 mt-3 md:mt-0 md:ml-4'>
                 <p className='font-playfair text-2xl'>{booking.hotel.name}
-                  <span className='font-inter text-sm'>{booking.room.roomType}</span>
+                  <span className='font-inter text-sm'> ({booking.room.roomType})</span>
                 </p>
                 <div className='flex items-center gap-1 text-sm text-gray-500'>
                   <img src={assets.locationIcon} alt="location-icon" className="w-4 h-4" />
