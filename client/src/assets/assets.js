@@ -10,6 +10,9 @@ import arrowIcon from './arrowIcon.svg';
 import starIconOutlined from './starIconOutlined.svg';
 import guestsIcon from './guests.svg';
 import regImage from './regImage.jpg';
+import dashboardIcon from './dashboardIcon.svg';
+import addIcon from './addIcon.svg';
+import listIcon from './listIcon.svg';
 
 // Import PNG icons
 import wifiIcon from './wifi.png';
@@ -30,7 +33,9 @@ export default {
   starIconOutlined,
   guestsIcon,
   regImage,
-
+  dashboardIcon,
+  addIcon,
+  listIcon,
 };
 
 // ================= Facility Icons ==================
