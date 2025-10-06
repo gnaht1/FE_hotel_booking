@@ -324,6 +324,7 @@ export const userBookingsDummyData = [
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Export assets (icons, images,…)
 const assets = {
   locationIcon,
@@ -332,6 +333,8 @@ const assets = {
   starIconOutlined,
 };
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 export const dashboardDummyData = {
@@ -370,6 +373,10 @@ export const dashboardDummyData = {
     }
   ]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
 }
 >>>>>>> Stashed changes
 =======
