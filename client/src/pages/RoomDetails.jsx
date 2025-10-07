@@ -169,8 +169,7 @@ justify-between bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.15)] p-6 rounded-xl m
                 </div>
                  <button className='px-6 py-2.5 mt-4 rounded text-white bg-primary hover:bg-primary hover:bg-primart-dull transition-all cursor-pointer'>Contact Now</button>
 
-            </div>
-
+            </div>  
         </div>
     )
 }
