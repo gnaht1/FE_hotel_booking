@@ -331,3 +331,39 @@ export const userBookingsDummyData = [
   },
 ];
 
+export const dashboardDummyData = {
+  totalBookings: 124,
+  totalRevenue: 5890,
+  bookings: [
+    {
+      user: { username: 'Alice Nguyen' },
+      room: { roomType: 'Deluxe Room' },
+      totalPrice: 120,
+      isPaid: true
+    },
+    {
+      user: { username: 'John Tran' },
+      room: { roomType: 'Suite Ocean View' },
+      totalPrice: 250,
+      isPaid: false
+    },
+    {
+      user: { username: 'Linh Pham' },
+      room: { roomType: 'Single Room' },
+      totalPrice: 85,
+      isPaid: true
+    },
+    {
+      user: { username: 'David Ho' },
+      room: { roomType: 'Family Room' },
+      totalPrice: 180,
+      isPaid: true
+    },
+    {
+      user: { username: 'Minh Anh' },
+      room: { roomType: 'Premium Room' },
+      totalPrice: 210,
+      isPaid: false
+    }
+  ]
+}
