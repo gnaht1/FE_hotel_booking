@@ -8,7 +8,11 @@ import starIconFilled from './starIconFilled.svg';
 import locationIcon from './locationIcon.svg';
 import arrowIcon from './arrowIcon.svg';
 import starIconOutlined from './starIconOutlined.svg';
-import guestsIcon from './guest.svg';
+import guestsIcon from './guests.svg';
+import regImage from './regImage.jpg';
+import dashboardIcon from './dashboardIcon.svg';
+import addIcon from './addIcon.svg';
+import listIcon from './listIcon.svg';
 
 // Import PNG icons
 import wifiIcon from './wifi.png';
@@ -27,6 +31,11 @@ export default {
   locationIcon,
   arrowIcon,
   starIconOutlined,
+  guestsIcon,
+  regImage,
+  dashboardIcon,
+  addIcon,
+  listIcon,
 };
 
 // ================= Facility Icons ==================
@@ -285,7 +294,7 @@ export const roomCommonData = [
 ];
 export const userBookingsDummyData = [
   {
-     _id: "b1",
+    _id: "b1",
     hotel: {
       name: "Sunrise Hotel",
       address: "123 Beach Road, Miami",
@@ -322,21 +331,6 @@ export const userBookingsDummyData = [
   },
 ];
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-// Export assets (icons, images,…)
-const assets = {
-  locationIcon,
-  guestsIcon,
-  starIconFilled,
-  starIconOutlined,
-};
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 export const dashboardDummyData = {
   totalBookings: 124,
   totalRevenue: 5890,
@@ -372,13 +366,4 @@ export const dashboardDummyData = {
       isPaid: false
     }
   ]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 }
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes
