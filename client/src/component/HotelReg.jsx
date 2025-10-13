@@ -15,16 +15,22 @@ const HotelReg = () => {
     const onSubmitHandler = async (e)=>{
         try {
             e.preventDefault();
+            
+            // Debug: Log the values being sent
+            console.log('Form values:', { name, contact, address, city });
+            
             const data = await axios.post(`/api/hotels`, {name, contact, address, city}, 
                 {headers: {Authorization: `Bearer ${await getToken()}`}})
-
-            if(data.success){
-                toast.success(data.message);
+    
+            console.log('Response:', data); // Debug: Log the response
+    
+            if(data.data.success){  // Fix: Use data.data.success
+                toast.success(data.data.message);
                 setIsOwner(true);
                 setShowHotelReg(false);
             }
             else {
-                toast.error(data.message); 
+                toast.error(data.data.message); 
             }
         } catch (error) {
             toast.error(error.message); 
@@ -70,12 +76,14 @@ const HotelReg = () => {
                 <div className='w-full mt-4 max-w-60 mr-auto'>
                     <label htmlFor="city" className='font-medium text-gray-500'>City</label>
                     <select id='city' 
-                    onChange={(e)=> setCity(e.target.value)} value={city}
-                    className='border border-gray-200
-                    rounded w-full px-3 py-2.5 mt-1 outline-indigo-500 font-light' required>
-                        {cities.map((city, i) => (
-                            <option key={i} value={city}>{city}</option>
-                        ))}
+                        onChange={(e)=> setCity(e.target.value)} value={city}
+                        className='border border-gray-200
+                        rounded w-full px-3 py-2.5 mt-1 outline-indigo-500 font-light' required>
+                        {/*Default Select Option*/}
+                        <option value="">Select a city</option>  
+                            {cities.map((city, i) => (
+                        <option key={i} value={city}>{city}</option>
+                            ))}
                     </select>
                 </div>
 
