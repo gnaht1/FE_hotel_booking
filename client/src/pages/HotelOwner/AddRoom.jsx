@@ -31,8 +31,8 @@ const AddRoom = () => {
     const onSubmitHandler = async (e)=>{
         e.preventDefault();
         // Check if all the input fields are filled
-        if (!inputs.roomType || !inputs.pricePerNight || !inputs.amenities || !Object.values(images).some(image => image)){
-            toast.error('Please fill in all the fields');
+        if (!inputs.roomType || !inputs.pricePerNight || inputs.pricePerNight <= 0 || !inputs.amenities || !Object.values(images).some(image => image)){
+            toast.error('Please fill in all the fields with valid values');
             return;
         }
         setLoading(true);
@@ -45,11 +45,26 @@ const AddRoom = () => {
             formData.append('amenities', JSON.stringify(amenities));
 
             // Append images to form data
+            let imageCount = 0;
             Object.keys(images).forEach(key => {
-                images[key] && formData.append('images', images[key]);
+                if (images[key]) {
+                    formData.append('images', images[key]);
+                    imageCount++;
+                    console.log('Added image:', key, images[key].name);
+                }
             });
+            
+            console.log('Total images to upload:', imageCount);
+            console.log('FormData contents:');
+            for (let [key, value] of formData.entries()) {
+                console.log(key, value);
+            }
 
-            const data = await axios.post('/api/rooms', formData, { headers: { Authorization: `Bearer ${await getToken()}` } });
+            const data = await axios.post('/api/rooms', formData, { 
+                headers: { 
+                    Authorization: `Bearer ${await getToken()}`
+                } 
+            });
             
             if (data.data.success){
                 toast.success(data.data.message);
