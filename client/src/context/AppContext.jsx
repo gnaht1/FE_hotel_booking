@@ -19,6 +19,8 @@ export const AppProvider = ({ children })=>{
     const [isOwner, setIsOwner] = useState(false)
     const [showHotelReg, setShowHotelReg] = useState(false)
     const [searchedCities, setSearchedCities] = useState([])
+    const [rooms, setRooms] = useState([])
+    
 const fetchUser = async ()=>{
     try {
         const {data} = await axios.get('/api/user', {headers: {Authorization: `Bearer ${await getToken()}`}})
