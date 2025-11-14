@@ -2,25 +2,36 @@ import React,{useState} from 'react'
 import assets from '../assets/assets'
 import { cities } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
+import { toast } from 'react-hot-toast'
 
 const Hero = () => {
-    const {navigate,getToken, axios, setSearchedCities} = useAppContext();
+    const {navigate,getToken, axios, setSearchedCities, user} = useAppContext();
     const [Destination,setDestination]=useState("");
     const onSearch=async(e)=>{
         e.preventDefault();
         navigate(`/rooms?destination=${Destination}`)
        
-        //Call API to save recent searches city
-        await axios.post('/api/user/store-recent-search',{recentSearchCity:Destination},{ headers: { Authorization: `Bearer ${await getToken()}` } });
-        
         //Add destination to search cities max 3 recent searched cities
         setSearchedCities(prevSearchedCities=>{
-            const updatedSearchedCities=[...prevSearchedCities, Destination];
+            const normalizedPrev = Array.isArray(prevSearchedCities) ? prevSearchedCities : [];
+            const dedupedSearchedCities=normalizedPrev.filter((city)=>city!==Destination);
+            const updatedSearchedCities=[...dedupedSearchedCities, Destination];
             if(updatedSearchedCities.length>3){
-                updatedSearchedCities.shift();
+                return updatedSearchedCities.slice(-3);
             }
             return updatedSearchedCities;
         })
+
+        if(!user){
+            return;
+        }
+
+        try {
+            const token = await getToken();
+            await axios.post('/api/user/store-recent-search',{recentSearchCity:Destination},{ headers: { Authorization: `Bearer ${token}` } });
+        } catch (error) {
+            toast.error(error.response?.data?.message || error.message);
+        }
     }
     return (
         <div className='flex flex-col items-start justify-center px-6 md:px-16 

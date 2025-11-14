@@ -46,7 +46,10 @@ const fetchUser = async ()=>{
         const {data} = await axios.get('/api/user', {headers: {Authorization: `Bearer ${await getToken()}`}})
         if(data.success){
             setIsOwner(data.role === "hotelOwner");
-            setSearchedCities(data.recentSearchedCities)
+            const recentCities = Array.isArray(data.recentSearchCities) ? data.recentSearchCities : [];
+            setSearchedCities(recentCities);
+            // tempt log
+            console.log('searchedCities from server', recentCities);
         }else{
             // Retry Fetching User Details after 5 seconds
             setTimeout(()=>{
