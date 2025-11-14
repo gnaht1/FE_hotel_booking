@@ -4,14 +4,14 @@ import { cities } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
 
 const Hero = () => {
-    const {navigate,getToken, axios, setSearchCities} = useAppContext();
+    const {navigate,getToken, axios, setSearchedCities} = useAppContext();
     const [Destination,setDestination]=useState("");
     const onSearch=async(e)=>{
         e.preventDefault();
         navigate(`/rooms?destination=${Destination}`)
        
         //Call API to save recent searches city
-        await axios.post('/api/user/store-recent-search',{recentSearchCity:Destination},{ headers: { Authorization: `Bearer ${getToken()}` } });
+        await axios.post('/api/user/store-recent-search',{recentSearchCity:Destination},{ headers: { Authorization: `Bearer ${await getToken()}` } });
         
         //Add destination to search cities max 3 recent searched cities
         setSearchedCities(prevSearchedCities=>{
