@@ -75,7 +75,7 @@ const Navbar = () => {
 
             {/* Desktop Right */}
             <div className="hidden md:flex items-center gap-4">
-                <img src={assets.SearchIcon} alt="SearchIcon" className={`h-6 w-6 ${isScrolled ? "text-black invert" : location.pathname === '/' ? "text-white" : "text-black"} transition-all duration-500`} />
+                {/* <img src={assets.SearchIcon} alt="SearchIcon" className={`h-6 w-6 ${isScrolled ? "text-black invert" : location.pathname === '/' ? "text-white" : "text-black"} transition-all duration-500`} /> */}
                 {user ?
                     (<UserButton>
                         <UserButton.MenuItems>

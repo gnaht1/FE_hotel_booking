@@ -22,6 +22,9 @@ const ListRoom = () => {
     // Available amenities list
     const availableAmenities = ['WiFi', 'Breakfast', 'Room Service', 'Pool']
     
+    // Available room types
+    const availableRoomTypes = ['Single Bed', 'Double Bed', 'Luxury Room', 'Family Suite']
+    
     const {axios, getToken, user, currency} = useAppContext()
 
     // Fetch Rooms of Hotel Owner
@@ -226,14 +229,17 @@ const ListRoom = () => {
                         <form onSubmit={handleUpdateRoom} className='space-y-4'>
                             <div>
                                 <label className='block text-gray-700 mb-2'>Room Type</label>
-                                <input 
-                                    type="text"
+                                <select
                                     name="roomType"
                                     value={editForm.roomType}
                                     onChange={handleEditFormChange}
                                     className='w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500'
                                     required
-                                />
+                                >
+                                    {availableRoomTypes.map((type, index) => (
+                                        <option key={index} value={type}>{type}</option>
+                                    ))}
+                                </select>
                             </div>
 
                             <div>
