@@ -19,6 +19,7 @@ import wifiIcon from './wifi.png';
 import poolIcon from './pool.png';
 import breakfastIcon from './breakfast.png';
 import parkingIcon from './parking.png';
+import roomServiceIcon from './support.png';
 
 // Export them for easy import elsewhere
 export default {
@@ -40,12 +41,12 @@ export default {
 
 // ================= Facility Icons ==================
 export const facilityIcons = {
-  "Free WiFi": wifiIcon,
+  "WiFi": wifiIcon,
   "Pool": poolIcon,
   "Breakfast": breakfastIcon,
   "Parking": parkingIcon,
+  "Room Service": roomServiceIcon,
 
-  // Các tiện ích thêm dùng link icon online
   "Sea View": "https://img.icons8.com/ios-filled/50/000000/sea-waves.png",
   "Spa": "https://img.icons8.com/ios-filled/50/000000/spa-flower.png",
   "Hiking Trails": "https://img.icons8.com/ios-filled/50/000000/trekking.png",
@@ -57,15 +58,19 @@ export const facilityIcons = {
 
 // ================= Cities ==================
 export const cities = [
-  "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia",
-  "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville",
-  "Fort Worth", "Columbus", "Charlotte", "San Francisco", "Indianapolis",
-  "Seattle", "Denver", "Boston", "El Paso", "Detroit", "Nashville", "Portland",
-  "Memphis", "Oklahoma City", "Las Vegas", "Louisville", "Baltimore",
-  "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Mesa", "Kansas City",
-  "Atlanta", "Colorado Springs", "Raleigh", "Omaha", "Miami", "Oakland",
-  "Minneapolis", "Tulsa", "Cleveland", "Wichita", "Arlington", "New Orleans",
-  "Bakersfield", "Tampa", "Honolulu"
+"An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu",
+" Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước",
+"Bình Thuận", "Cà Mau", "Cần Thơ", "Cao Bằng", "Đà Nẵng",
+"Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp",
+"Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh",
+"Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên",
+"Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng",
+"Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An",
+"Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình",
+"Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng",
+"Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa",
+"Thừa Thiên Huế", "Tiền Giang", "TP. Hồ Chí Minh", "Trà Vinh", "Tuyên Quang",
+"Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
 ];
 
 // ================= Exclusive offers =================
@@ -76,7 +81,7 @@ export const exclusiveOffers = [
     description: "Perfect for a romantic escape with your loved one",
     priceOff: 25,
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?...",
-    expiryDate: "Dec 31, 2024"
+    expiryDate: "Dec 31, 2025"
   },
   {
     _id: "2",

@@ -86,17 +86,7 @@ import { toast } from 'react-hot-toast';
                             ({room.roomType})
                         </span>
                     </h1>
-
-                    <span className="text-xs font-inter py-1.5 px-3 text-white bg-orange-500 rounded-full md:ml-3">
-                        20% OFF
-                    </span>
                 </div>
-            </div>
-
-            {/* Room Rating */}
-            <div className='flex items-center gap-1 mt-2'>
-                <StarRating />
-                <p className='ml-2'>200+ Reviews</p>
             </div>
 
             {/*Room Address */}
@@ -128,9 +118,6 @@ import { toast } from 'react-hot-toast';
             {/* Room Highlights & Price */}
             <div className='flex flex-col md:flex-row md:justify-between mt-10 items-start md:items-center'>
                 <div className='flex flex-col'>
-                    <h1 className='text-3xl md:text-4xl font-playfair'>
-                        Experience Luxury Like Never Before
-                    </h1>
                     <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
                         {room.amenities.map((item, index) => (
                             <div key={index} className='flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100'>

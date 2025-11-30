@@ -4,14 +4,24 @@ import assets from '../assets/assets'
 import { cities } from '../assets/assets'
 
 const HotelCard = ({ room, index }) => {
+  // Bảo vệ nếu room rỗng hoặc không hợp lệ
+  if (!room) return null;
+
+  const hotel = room.hotel ?? {};
+  const name = hotel.name ?? 'Unknown Hotel';
+  const address = hotel.address ?? 'Unknown address';
+  const imgSrc = Array.isArray(room.images) && room.images.length > 0 ? room.images[0] : (assets.regImage ?? '');
+  const price = room.pricePerNight ?? '—';
+  const rating = room.rating ?? 4.5;
+  const roomId = room._id ?? '';
+
   return (
     <Link
-      to={'/rooms/' + room._id}
+      to={roomId ? `/rooms/${roomId}` : '#'}
       onClick={() => scrollTo(0, 0)}
-      key={room._id}
       className="relative max-w-70 w-full rounded-xl overflow-hidden bg-white text-gray-500/90 shadow-[0px_4px_4px_rgba(0,0,0,0.05)]"
     >
-      <img src={room.images[0]} alt="" />
+      <img src={imgSrc} alt={name} />
 
       {index % 2 === 0 && (
         <p className="px-3 py-1 absolute top-3 left-3 text-xs bg-white text-gray-800 font-medium rounded-full">
@@ -22,23 +32,23 @@ const HotelCard = ({ room, index }) => {
       <div className="p-4 pt-5">
         <div className="flex items-center justify-between">
           <p className="font-playfair text-xl font-medium text-gray-800">
-            {room.hotel.name}
+            {name}
           </p>
 
           <div className="flex items-center gap-1">
             <img src={assets.starIconFilled} alt="star-icon" className="w-4 h-4" />
-            4.5
+            {rating}
           </div>
         </div>
 
         <div className="flex items-center gap-1 text-sm">
           <img src={assets.locationIcon} alt="location-icon" />
-          <span>{room.hotel.address}</span>
+          <span>{address}</span>
         </div>
 
         <div className="flex items-center justify-between mt-4">
           <p>
-            <span className="text-xl text-gray-800">${room.pricePerNight}</span>
+            <span className="text-xl text-gray-800">${price}</span>
             /night
           </p>
 

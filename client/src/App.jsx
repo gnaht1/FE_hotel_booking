@@ -14,10 +14,13 @@ import ListRoom from './pages/HotelOwner/ListRoom'
 import { Toaster } from 'react-hot-toast';
 import { useAppContext } from './context/AppContext';
 import Loader from './component/Loader';  
+import About from "./pages/About";
+import Blog from "./pages/Blog"; 
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes('owner');
-  const {showHotelReg} = useAppContext();
+  const { showHotelReg } = useAppContext();
+
   return (
     <div>
       <Toaster />
@@ -25,23 +28,33 @@ const App = () => {
       {showHotelReg && <HotelReg />}
 
       <div className='min-h-[70vh]'>
+
         <Routes>
+          {/* PUBLIC ROUTES */}
           <Route path='/' element={<Home />} />
           <Route path='/rooms' element={<AllRooms />} />
           <Route path='/rooms/:id' element={<RoomDetails />} />
           <Route path='/my-bookings' element={<MyBookings />} />
           <Route path='/loader/:nextUrl' element={<Loader />} />
+
+          {/* ABOUT / BLOG */}
+          <Route path='/about' element={<About />} />
+          <Route path='/blog' element={<Blog />} />
+
+          {/* OWNER ROUTES */}
           <Route path='/owner' element={<Layout />} >
             <Route index element={<Dashboard />} />
             <Route path='add-room' element={<AddRoom />} />
             <Route path='list-room' element={<ListRoom />} />
           </Route>
-          
+
         </Routes>
       </div>
-      <Footer />
+
+      {/* Footer vẫn luôn hiện */}
+      {!isOwnerPath && <Footer />}
     </div>
   )
 }
 
-export default App
+export default App;

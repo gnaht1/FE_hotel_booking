@@ -18,11 +18,10 @@ const AddRoom = () => {
         roomType: '',
         pricePerNight: 0,
         amenities: {
-            'Free WiFi': false,
-            'Free Breakfast': false,
+            'WiFi': false,
+            'Breakfast': false,
             'Room Service': false,
-            'Mountain View': false,
-            'Pool Access': false
+            'Pool': false
         }
     })
 
@@ -72,11 +71,10 @@ const AddRoom = () => {
                     roomType: '',
                     pricePerNight: 0,
                     amenities: {
-                        'Free WiFi': false,
-                        'Free Breakfast': false,
+                        'WiFi': false,
+                        'Breakfast': false,
                         'Room Service': false,
-                        'Mountain View': false,
-                        'Pool Access': false
+                        'Pool': false
                     }
                 });
                 setImages({

@@ -4,16 +4,16 @@ import assets, { exclusiveOffers } from '../assets/assets'
 
 const ExclusiveOffers = () => {
     return (
-        <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 xl:px-32 pt-20 pb-30'>
-            <div className='flex flex-col md:flex-row items-center justify-between w-full'>
-                <Title align="left" title="Exclusive Offers" subTitle="Take advantage of our limited-time 
-                offers and special packages to enhance your stay and create unforgettable memories." />
-                <button className='flex items-center gap-2 group cursor-pointer hover:cursor-pointer'>
-                    View All Offers
-                    <img src={assets.arrowIcon} alt="arrow-icon"
-                        className='w-4 h-4 group-hover:translate-x-1 transition-all' />
-                </button>
-            </div>
+        <div>
+                    <div className='flex flex-col md:flex-row items-center justify-center w-full'>
+                        <div className="w-full md:w-2/3 text-center">
+                            <Title
+                                align="center"
+                                title="Exclusive Offers"
+                                subTitle="Take advantage of our limited-time offers and special packages to enhance your stay and create unforgettable memories."
+                            />
+                        </div>
+                    </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
                 {exclusiveOffers.map((item) => (
@@ -38,12 +38,6 @@ const ExclusiveOffers = () => {
                             <p className='text-sm text-gray-200 mb-3 line-clamp-2'>{item.description}</p>
                             <p className='text-xs text-gray-300'>Expires {item.expiryDate}</p>
                         </div>
-
-                        <button className='absolute bottom-4 right-4 bg-white text-gray-800 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-md hover:cursor-pointer z-10'>
-                            View Offer
-                            <img src={assets.arrowIcon} alt="arrow-icon"
-                                className='w-3 h-3 group-hover:translate-x-1 transition-transform duration-300' />
-                        </button>
                     </div>
                 ))}
             </div>

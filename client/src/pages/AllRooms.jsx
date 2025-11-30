@@ -164,10 +164,6 @@ const AllRooms = () => {
       <div>
         <div className='flex flex-col items-start text-left'>
           <h1 className='font-playfair text-4xl md:text-[40px]'>Hotel Rooms</h1>
-          <p className='text-sm md:text-base text-gray-500/90 mt-2 max-w-174'>
-            Take advantage of our limited-time offers and special packages to enhance your stay 
-            and create unforgettable memories.
-          </p>
         </div>
         {filteredRooms && filteredRooms.length > 0 ? filteredRooms.map((room) => (
     <div
@@ -198,7 +194,7 @@ const AllRooms = () => {
         {room.hotel.name}
       </p>
 
-      <div className='flex items-center'>
+      {/* <div className='flex items-center'>
         <StarRating />
         <p className='ml-2'>200+ reviews</p>
       </div>
@@ -206,7 +202,7 @@ const AllRooms = () => {
       <div className='flex items-center gap-1 text-gray-500 mt-2 text-sm'>
         <img src={assets.locationIcon} alt='location icon' />
         <span>{room.hotel.address}</span>
-      </div>
+      </div> */}
         {/* Room Amenities */}
         <div className='flex flex-wrap items-center mt-3 mb-6 gap-4'>
           {room.amenities.map((item, index)=>(
