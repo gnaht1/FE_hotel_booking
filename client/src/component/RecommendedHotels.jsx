@@ -7,16 +7,38 @@ const RecommendedHotels = () => {
     const {rooms, searchedCities} = useAppContext();
     const [recommended, setRecommended] = useState([]);
 
-   const filterHotels = ()=>{
-    const filteredHotels = rooms.slice().filter(room =>
-        Array.isArray(searchedCities) && searchedCities.includes(room.hotel.city)
-    );
-    setRecommended(filteredHotels);
-}
+    const filterHotels = () => {
+        // Debug logging
+        console.log('RecommendedHotels - rooms:', rooms?.length, 'searchedCities:', searchedCities);
+        
+        if (!rooms || rooms.length === 0 || !Array.isArray(searchedCities) || searchedCities.length === 0) {
+            setRecommended([]);
+            return;
+        }
 
-        useEffect(()=>{
+        // Get all unique hotel cities for debugging
+        const hotelCities = rooms.map(room => room?.hotel?.city).filter(Boolean);
+        console.log('Available hotel cities:', [...new Set(hotelCities)]);
+        console.log('User searched cities:', searchedCities);
+
+        // Filter rooms where hotel city matches any searched city (case-insensitive, partial match)
+        const filteredHotels = rooms.filter(room => {
+            if (!room || !room.hotel || !room.hotel.city) return false;
+            
+            const hotelCity = room.hotel.city.toLowerCase();
+            return searchedCities.some(searchedCity => 
+                hotelCity.includes(searchedCity.toLowerCase()) || 
+                searchedCity.toLowerCase().includes(hotelCity)
+            );
+        });
+
+        console.log('Filtered recommended hotels:', filteredHotels.length);
+        setRecommended(filteredHotels);
+    }
+
+    useEffect(() => {
         filterHotels()
-    },[rooms, searchedCities])
+    }, [rooms, searchedCities])
 
     return recommended.length > 0 && (
         <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 bg-slate-50

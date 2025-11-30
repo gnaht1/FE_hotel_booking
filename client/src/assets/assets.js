@@ -123,7 +123,7 @@ export const testimonials = [
     id: 3,
     name: "Sarah Chen",
     address: "Tokyo, Japan",
-    image: "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/558125765_...",
+    image: "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/558125765_679953391788540_7484632322891991755_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PjY22q38cZsQ7kNvwEkfcTb&_nc_oc=AdkxSsRiidDJ6GYPd46x4GpYTYKZdQT80E-YCW2Q56H141pZJbs_joT8HaLmaGKF1To&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=gCp30teaKqJr7pesb6MMpQ&oh=00_Afjfy9A2UYPoMY2LLt0iuwNFqxsYKn6oBnbZEMo_S6_naA&oe=6932286C",
     rating: 4,
     review: "Amazing platform with incredible attention to detail..."
   }
