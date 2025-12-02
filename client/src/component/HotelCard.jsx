@@ -23,11 +23,11 @@ const HotelCard = ({ room, index }) => {
     >
       <img src={imgSrc} alt={name} className="w-full h-48 object-cover" />
 
-      {index % 2 === 0 && (
+      {/* {index % 2 === 0 && (
         <p className="px-3 py-1 absolute top-3 left-3 text-xs bg-white text-gray-800 font-medium rounded-full">
           Best Seller
         </p>
-      )}
+      )} */}
 
       <div className="p-4 pt-5">
         <div className="flex items-center justify-between">
@@ -35,10 +35,10 @@ const HotelCard = ({ room, index }) => {
             {name}
           </p>
 
-          <div className="flex items-center gap-1">
+          {/* <div className="flex items-center gap-1">
             <img src={assets.starIconFilled} alt="star-icon" className="w-4 h-4" />
             {rating}
-          </div>
+          </div> */}
         </div>
 
         <div className="flex items-center gap-1 text-sm">

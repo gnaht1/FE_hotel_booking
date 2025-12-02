@@ -96,20 +96,24 @@ import { toast } from 'react-hot-toast';
             </div>
 
             {/*Room Images */}
-            <div className='flex flex-col md:flex-row mt-6 gap-6'>
+            <div className='flex flex-col lg:flex-row mt-6 gap-4'>
+                {/* Main Image */}
                 <div className='lg:w-1/2 w-full'>
                     <img src={mainImage} alt="Room Image"
-                        className='w-full rounded-xl shadow-lg object-cover' />
+                        className='w-full h-72 md:h-96 lg:h-[400px] rounded-xl shadow-lg object-cover' />
                 </div>
 
-                <div className='grid grid-cols-2 gap-4 lg:w-1/2 w-full'>
-                    {room?.images.length > 1 && room?.images.map((image, index) => (
+                {/* Thumbnail Grid - 2x2 layout */}
+                <div className='grid grid-cols-2 gap-3 lg:w-1/2 w-full'>
+                    {room?.images.length > 1 && room?.images.slice(0, 4).map((image, index) => (
                         <img
                             onClick={() => setMainImage(image)}
                             key={index}
                             src={image}
-                            alt="Room Image"
-                            className={`w-full rounded-xl shadow-lg object-cover cursor-pointer ${mainImage === image ? 'outline-3 outline-orange-500' : ''}`}
+                            alt={`Room Image ${index + 1}`}
+                            className={`w-full h-32 md:h-44 lg:h-[192px] rounded-xl shadow-md object-cover cursor-pointer 
+                                transition-all duration-200 hover:opacity-90 hover:scale-[1.02]
+                                ${mainImage === image ? 'ring-3 ring-orange-500 ring-offset-2' : ''}`}
                         />
                     ))}
                 </div>
