@@ -16,6 +16,8 @@ import { useAppContext } from './context/AppContext';
 import Loader from './component/Loader';  
 import About from "./pages/About";
 import Blog from "./pages/Blog"; 
+import ContactUs from "./pages/ContactUs";
+import SafetyInformation from "./pages/SafetyInformation";
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes('owner');
@@ -36,10 +38,10 @@ const App = () => {
           <Route path='/rooms/:id' element={<RoomDetails />} />
           <Route path='/my-bookings' element={<MyBookings />} />
           <Route path='/loader/:nextUrl' element={<Loader />} />
-
-          {/* ABOUT / BLOG */}
           <Route path='/about' element={<About />} />
           <Route path='/blog' element={<Blog />} />
+          <Route path='/contact' element={<ContactUs />} />
+          <Route path='/safety' element={<SafetyInformation />} />
 
           {/* OWNER ROUTES */}
           <Route path='/owner' element={<Layout />} >

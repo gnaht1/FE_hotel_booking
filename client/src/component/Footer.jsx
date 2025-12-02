@@ -18,15 +18,14 @@ const Footer = () => {
                 <ul className='mt-3 flex flex-col gap-2 text-sm'>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/blog">Blog</Link></li>
-                    <li><a href="#">Partners</a></li>
                 </ul>
             </div>
 
             <div>
                 <p className='text-lg text-gray-800'>SUPPORT</p>
                 <ul className='mt-3 flex flex-col gap-2 text-sm'>
-                    <li><a href="#">Safety Information</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><Link to="/safety">Safety Information</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </div>
 
