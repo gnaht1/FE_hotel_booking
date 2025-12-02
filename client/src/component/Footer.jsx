@@ -3,33 +3,33 @@ import assets from '../assets/assets'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
-  return (
-    <div className='bg-[#F6F9FD] text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
-        <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
-            <div className='max-w-80'>
-                <img src={assets.Logo} alt="logo" className='mb-4 h-8 md:h-9 invert opacity-80' />
-                <p className='text-sm'>
-                    Discover the world's most extraordinary places to stay, from boutique hotels to luxury villas and private islands.
-                </p>
-            </div>
+    return (
+        <div className='bg-[#F6F9FD] text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
+            <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
+                <div className='max-w-80'>
+                    <img src={assets.Logo} alt="logo" className='mb-4 h-8 md:h-9 invert opacity-80' />
+                    <p className='text-sm'>
+                        Discover the world's most extraordinary places to stay, from boutique hotels to luxury villas and private islands.
+                    </p>
+                </div>
 
-            <div>
-                <p className='text-lg text-gray-800'>COMPANY</p>
-                <ul className='mt-3 flex flex-col gap-2 text-sm'>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
-                </ul>
-            </div>
+                <div>
+                    <p className='text-lg text-gray-800'>COMPANY</p>
+                    <ul className='mt-3 flex flex-col gap-2 text-sm'>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                    </ul>
+                </div>
 
-            <div>
-                <p className='text-lg text-gray-800'>SUPPORT</p>
-                <ul className='mt-3 flex flex-col gap-2 text-sm'>
-                    <li><Link to="/safety">Safety Information</Link></li>
-                    <li><Link to="/contact">Contact Us</Link></li>
-                </ul>
-            </div>
+                <div>
+                    <p className='text-lg text-gray-800'>SUPPORT</p>
+                    <ul className='mt-3 flex flex-col gap-2 text-sm'>
+                        <li><Link to="/safety">Safety Information</Link></li>
+                        <li><Link to="/contact">Contact Us</Link></li>
+                    </ul>
+                </div>
 
-            {/* <div className='max-w-80'>
+                {/* <div className='max-w-80'>
                 <p className='font-playfair text-lg text-gray-800'>STAY UPDATED</p>
                 <p className='mt-3 text-sm'>
                     Subscribe to our newsletter for inspiration and special offers.
@@ -45,20 +45,20 @@ const Footer = () => {
                     </button>
                 </div>
             </div> */}
-        </div>
+            </div>
 
-        <hr className='border-gray-300 mt-8' />
+            <hr className='border-gray-300 mt-8' />
 
-        <div className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
-            <p>© {new Date().getFullYear()} JMM. All rights reserved.</p>
-            <ul className='flex items-center gap-4'>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Sitemap</a></li>
-            </ul>
+            <div className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
+                <p>© {new Date().getFullYear()} JMM. All rights reserved.</p>
+                {/* <ul className='flex items-center gap-4'>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul> */}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Footer
