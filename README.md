@@ -100,7 +100,7 @@ Leveraged specialized services to ensure security and scalability :
   * **Clerk**: Authentication and session management 
   * **Cloudinary**: Media and image optimization
   * **Brevo**: Transactional email automation 
-* **Documentation**: Swagger for API testing and documentation[cite: 46, 141].
+* **Documentation**: Swagger for API testing and documentation
 
 ## 5.2. Skills Gained
 * **Full-Stack Proficiency**: Mastered the **MERN Stack** (MongoDB, Express, React, Node.js) to build a complete booking platform from scratch.
